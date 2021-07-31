@@ -21,6 +21,9 @@ class RouteServiceProvider extends ServiceProvider
     // public const CLIENT =
     public const ADMIN = '/admin';
 
+    protected $api_v1_namespace = 'App\\Http\\Controllers\\Api\\V1';
+    protected $web_namespace = 'App\\Http\\Controllers\\Web';
+
     /**
      * The controller namespace for the application.
      *
@@ -40,14 +43,21 @@ class RouteServiceProvider extends ServiceProvider
         $this->configureRateLimiting();
 
         $this->routes(function () {
-            Route::prefix('api')
-                ->middleware('api')
-                ->namespace($this->namespace)
-                ->group(base_path('routes/api.php'));
+            // load api routes
+            $this->map_api_v1_routes();
 
             Route::middleware('web')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/web.php'));
+
+            Route::middleware('web')
+                ->namespace($this->namespace)
+                ->group(base_path('routes/client_web.php'));
+
+            Route::middleware('web')
+                ->namespace($this->namespace)
+                ->prefix('admin')
+                ->group(base_path('routes/admin_web.php'));
         });
     }
 
@@ -61,5 +71,18 @@ class RouteServiceProvider extends ServiceProvider
         RateLimiter::for('api', function (Request $request) {
             return Limit::perMinute(60)->by(optional($request->user())->id ?: $request->ip());
         });
+    }
+
+    /**
+     * this function load the api routes for the version v1
+     *
+     * @return void
+     */
+    private function map_api_v1_routes()
+    {
+        Route::prefix('api/v1')
+            ->middleware('api')
+            ->namespace($this->api_v1_namespace)
+            ->group(base_path('routes/api/v1.php'));
     }
 }

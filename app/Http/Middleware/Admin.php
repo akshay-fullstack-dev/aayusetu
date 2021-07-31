@@ -21,6 +21,6 @@ class Admin
             return $next($request);
         }
 
-        abort('UnAuthorized Action.');
+        die('UnAuthorized Action.');
     }
 }
