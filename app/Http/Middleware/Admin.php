@@ -17,7 +17,7 @@ class Admin
      */
     public function handle(Request $request, Closure $next)
     {
-        if (auth()->user()->role  == UserEnum::ADMIN_ROLE) {
+        if (auth()->user()->role  == UserEnum::ADMIN_ROLE || auth()->user()->role  == UserEnum::SUPPER_ADMIN_ROLE) {
             return $next($request);
         }
 
