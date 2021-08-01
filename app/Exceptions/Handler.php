@@ -7,13 +7,16 @@ use Throwable;
 
 class Handler extends ExceptionHandler
 {
+    use ApiExceptionHandle;
     /**
      * A list of the exception types that are not reported.
      *
      * @var array
      */
     protected $dontReport = [
-        //
+        BadRequestException::class,
+        RecordNotFoundException::class,
+        
     ];
 
     /**
@@ -37,5 +40,15 @@ class Handler extends ExceptionHandler
         $this->reportable(function (Throwable $e) {
             //
         });
+    }
+
+    public function render($request, Throwable $exception)
+    {
+
+        if ($request->is('api/*')) {
+            return $this->processApiException($exception);
+        }
+        // echo "outside the api";
+        return parent::render($request, $exception);
     }
 }

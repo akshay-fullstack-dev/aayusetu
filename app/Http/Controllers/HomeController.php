@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $current_user = auth()->user();
+        return view('client.dashboard', ['current_user' => $current_user]);
     }
 }
