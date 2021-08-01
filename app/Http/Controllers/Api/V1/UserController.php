@@ -25,6 +25,7 @@ class UserController
     public function register(Requests\UserRegisterRequest $request)
     {
         $user = User::create(UserHelper::registerUserData($request));
+        $user->access_token = $user->createToken('Api access token')->accessToken;
         return $this->apiResponse(new UserResource($user), $this->lang_message('register_success'));
     }
 
