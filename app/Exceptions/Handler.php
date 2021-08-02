@@ -16,7 +16,7 @@ class Handler extends ExceptionHandler
     protected $dontReport = [
         BadRequestException::class,
         RecordNotFoundException::class,
-        
+
     ];
 
     /**
