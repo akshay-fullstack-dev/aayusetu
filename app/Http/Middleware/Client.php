@@ -20,6 +20,7 @@ class Client
         if (auth()->user()->role  == UserEnum::CLIENT_ROLE) {
             return $next($request);
         }
+
         die('UnAuthorized Action.');
     }
 }

@@ -29,6 +29,6 @@ class DashboardController extends Controller
     public function admins()
     {
         $clients = User::where('role', UserEnum::ADMIN_ROLE)->get();
-        return view('admin.doctor', compact('clients'));
+        return view('admin.admin', compact('clients'));
     }
 }

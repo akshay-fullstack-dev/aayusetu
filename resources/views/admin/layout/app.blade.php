@@ -45,7 +45,7 @@
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
                 <!-- Messages Dropdown Menu -->
-                <li class="nav-item dropdown">
+                {{-- <li class="nav-item dropdown">
                     <a class="nav-link" data-toggle="dropdown" href="#">
                         <i class="far fa-comments"></i>
                         <span class="badge badge-danger navbar-badge">3</span>
@@ -105,7 +105,7 @@
                         <div class="dropdown-divider"></div>
                         <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
                     </div>
-                </li>
+                </li> --}}
                 <!-- Notifications Dropdown Menu -->
                 <li class="nav-item dropdown">
                     <a class="nav-link" data-toggle="dropdown" href="#">
@@ -181,7 +181,7 @@
                 </div>
 
                 <!-- SidebarSearch Form -->
-                <div class="form-inline">
+                {{-- <div class="form-inline">
                     <div class="input-group" data-widget="sidebar-search">
                         <input class="form-control form-control-sidebar" type="search" placeholder="Search"
                             aria-label="Search">
@@ -191,7 +191,7 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
