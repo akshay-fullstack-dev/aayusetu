@@ -22,10 +22,20 @@
                         <div class="content">
                             <h3>Why Choose {{ ucfirst(env('APP_NAME')) }}?</h3>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus
-                                optio ad corporis.
+                                {{ ucfirst(env('APP_NAME')) }} is a platform for our clients
+                                and customers where we bring to them the
+                                best Ayurvedic Consultancy by India's finest
+                                and the most superlative Ayurvedic Doctors.
+                                Here the doctors come in one-to-one
+                                contact with our client in need and guide
+                                them through their issues related to any
+                                department.
+                                {{ ucfirst(env('APP_NAME')) }} spreads the awareness on
+                                Ayurvedic solutions to most of your
+                                problems with you not actually going to see
+                                a doctor and wait for hours but now you can
+                                consult a doctor and get your treatment
+                                online.
                             </p>
                             <div class="text-center">
                                 <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
@@ -37,25 +47,48 @@
                             <div class="row">
                                 <div class="col-xl-4 d-flex align-items-stretch">
                                     <div class="icon-box mt-4 mt-xl-0">
-                                        <i class="bx bx-receipt"></i>
-                                        <h4>Corporis voluptates sit</h4>
-                                        <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut
-                                            aliquip</p>
+                                        <i class>
+                                            <img src="{{ url('assets/img/image_1.png') }}" alt="" srcset=""
+                                                style="height: 100px; width:90px; margin-bottom:20px">
+                                        </i>
+                                        <h4>Direct Consultancy:</h4>
+                                        <p>{{ ucfirst(env('APP_NAME')) }} provides one-to-
+                                            one consultancy to the users from
+                                            our team of doctors. It includes,
+                                            chat consultancy, telephonic
+                                            consultancy and even video call
+                                            consultancy if needed as well.</p>
                                     </div>
                                 </div>
                                 <div class="col-xl-4 d-flex align-items-stretch">
                                     <div class="icon-box mt-4 mt-xl-0">
-                                        <i class="bx bx-cube-alt"></i>
-                                        <h4>Ullamco laboris ladore pan</h4>
-                                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                            deserunt</p>
+                                        <i class>
+                                            <img src="{{ url('assets/img/image_2.png') }}" alt="" srcset=""
+                                                style="height: 100px; width:90px; margin-bottom:20px">
+                                        </i>
+                                        <h4>Finest team of Doctor:</h4>
+                                        <p>{{ ucfirst(env('APP_NAME')) }} has India's finest
+                                            and the most Superlative Doctors.
+                                            The doctors are well qualified,
+                                            licensed and have experience of
+                                            more than 10 years in Ayurvedic
+                                            Practice.</p>
                                     </div>
                                 </div>
                                 <div class="col-xl-4 d-flex align-items-stretch">
                                     <div class="icon-box mt-4 mt-xl-0">
-                                        <i class="bx bx-images"></i>
-                                        <h4>Labore consequatur</h4>
-                                        <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere
+                                        <i class>
+                                            <img src="{{ url('assets/img/image_3.png') }}" alt="" srcset=""
+                                                style="height: 100px; width:90px; margin-bottom:20px">
+                                        </i>
+                                        <h4>Personalized Consultancy:</h4>
+                                        <p>With {{ ucfirst(env('APP_NAME')) }} you can get
+                                            personalized treatments, prescription
+                                            for the medicines and other meal
+                                            plans dependent upon your
+                                            requirement and need.
+                                            The medical data provided by the user
+                                            is kept safe and secured with us.
                                         </p>
                                     </div>
                                 </div>
@@ -79,31 +112,21 @@
 
                     <div
                         class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-                        <h3>Enim quis est voluptatibus aliquid consequatur fugiat</h3>
-                        <p>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima
-                            temporibus laudantium. Soluta voluptate sed facere corporis dolores excepturi. Libero laboriosam
-                            sint et id nulla tenetur. Suscipit aut voluptate.</p>
+                        <h3>{{ ucfirst(env('APP_NAME')) }}</h3>
+                        <p>Aayusetu is a brand that focuses on providing the best products and services to its customers and
+                            clients. We have been a leader in the Ayurvedic and Herbal products industry since a long time
+                            and after being able to mark our presence in our customers hearts through quality and purest
+                            products, we decided to expand our vision and envisioned {{ ucfirst(env('APP_NAME')) }}. {{ ucfirst(env('APP_NAME')) }} is a
+                            platform for our clients and customers where we bring to them the best Ayurvedic Consultancy by
+                            India’s finest and the most superlative Ayurvedic Doctors. Here the doctors come in one-to-one
+                            contact with our client in need and guide them through their issues related to any department.
+                            Through {{ ucfirst(env('APP_NAME')) }} we wish to spread the awareness on Ayurvedic solutions to most of your
+                            problems with you not actually going to see a doctor and wait for hours but now you can consult
+                            a doctor and get your treatment online.
 
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-fingerprint"></i></div>
-                            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-                            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias
-                                excepturi sint occaecati cupiditate non provident</p>
-                        </div>
 
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-gift"></i></div>
-                            <h4 class="title"><a href="">Nemo Enim</a></h4>
-                            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                praesentium voluptatum deleniti atque</p>
-                        </div>
-
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-atom"></i></div>
-                            <h4 class="title"><a href="">Dine Pad</a></h4>
-                            <p class="description">Explicabo est voluptatum asperiores consequatur magnam. Et veritatis
-                                odit. Sunt aut deserunt minus aut eligendi omnis</p>
-                        </div>
+                            {{ ucfirst(env('APP_NAME')) }}: TAP US FOR CARE AND CURE
+                        </p>
 
                     </div>
                 </div>
